@@ -39,6 +39,7 @@ class Container:
         return sum_pera
 
     def count_colors(self, shapelist):  # count how many shapes are in each color
+        colors = {"red": 0, "blue": 0, "green": 0, "yellow": 0, "purple": 0}
         red = 0
         blue = 0
         green = 0
@@ -57,8 +58,8 @@ class Container:
                 purple = purple + 1
             else:
                 print(x.getcolor)
-        return "red: " + str(red) + " blue: " + str(blue) + " green: " + str(green) + " yellow: " + str(yellow) + \
-               " purple: " + str(purple)
+        colors = {"red": red, "blue": blue, "green": green, "yellow": yellow, "purple": purple}
+        return colors
 
     def random_color(self):  # returns a random color
         rcolor = random.randrange(0, 5)
